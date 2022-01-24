@@ -58,6 +58,14 @@
             </div>
           </template>
         </zk-values-block>
+        <zk-values-block class="py-3 lg:pt-3">
+          <template slot="left-top">
+            <div class="headline">Fee token</div>
+          </template>
+          <template slot="right-top">
+            <token-dropdown v-model="feeToken" fee-allowed standalone :disabled="feesLoading" class="w-44" />
+          </template>
+        </zk-values-block>
         <zk-max-height v-model="feesOpened" :update-value="allFees.length">
           <zk-values-block v-for="(item, index) in allFees" :key="index" class="pt-1 lg:pt-3">
             <template slot="left-top">
@@ -118,10 +126,10 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { BigNumber, BigNumberish } from "ethers";
 import { Network, TokenSymbol } from "zksync/build/types";
-import { ZkFeeType, ZkTokenPrices } from "@matterlabs/zksync-nuxt-core/types";
-import { BigNumber, BigNumberish } from "@ethersproject/bignumber/lib/bignumber";
-import { TotalByToken, TransactionData, TransactionFee } from "~/types";
+import { ZkFeeType, ZkTokenPrices } from "@rsksmart/rif-rollup-nuxt-core/types";
+import { TotalByToken, TransactionData, TransactionFee } from "@/types/index";
 import Logo from "@/blocks/logo.vue";
 import { ETHER_NETWORK_NAME } from "~/plugins/build";
 
@@ -133,6 +141,7 @@ export default Vue.extend({
     return {
       totalOpened: false,
       feesOpened: false,
+      feeTokenModal: false,
     };
   },
   computed: {
@@ -157,8 +166,13 @@ export default Vue.extend({
     transactionData(): TransactionData {
       return this.$store.getters["checkout/getTransactionData"];
     },
-    feeToken(): TokenSymbol {
-      return this.$store.getters["zk-transaction/feeSymbol"];
+    feeToken: {
+      get(): TokenSymbol {
+        return this.$store.getters["zk-transaction/feeSymbol"];
+      },
+      set(token: TokenSymbol): void {
+        this.$store.dispatch("checkout/setFeeToken", token);
+      },
     },
     allFees(): Array<TransactionFee> {
       if (!this.loggedIn) {
