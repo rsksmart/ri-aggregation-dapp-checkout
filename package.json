@@ -1,6 +1,6 @@
 {
   "name": "@matterlabs/zksync-dapp-checkout",
-  "title": "zkSync Checkout — simple permissionless DeFi payment gateway",
+  "title": "zkSync Checkout - RSK Port — simple permissionless DeFi payment gateway",
   "homepage": "https://checkout.zksync.io",
   "description": "zkSync Checkout helps anyone permission-less adopt checkout backed by zkSync, receive payments automatically and benefit from all the advantage of zkSync Rollup: speed of the transaction, times lower cost of a single transaction, simplicity of withdrawal fund to the onchain-wallet.",
   "version": "3.2.0",
@@ -53,7 +53,8 @@
     "@nuxt/typescript-runtime": "^2.1.0",
     "core-js": "^3.15.1",
     "matter-zk-ui": "^1.0.9",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "patch-package": "^6.4.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -123,7 +124,7 @@
     "*.{md,vue}": "yarn lint:spell-check"
   },
   "scripts": {
-    "local": "yarn ci:env 'rinkeby' 'dev' 1 1",
+    "local": "yarn ci:env 'localhost' 'dev' 1 1",
     "dev": "yarn local && nuxt",
     "generate": "nuxt generate ",
     "start": "yarn local && nuxt start",
@@ -146,7 +147,7 @@
     "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
     "lint": "yarn lint:script && yarn lint:style",
     "semantic-release": "semantic-release",
-    "postinstall": "husky install"
+    "postinstall": "husky install && patch-package"
   },
   "packageManager": "yarn@3.1.1"
 }

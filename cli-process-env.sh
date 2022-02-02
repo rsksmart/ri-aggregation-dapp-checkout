@@ -13,7 +13,7 @@ Blue="\033[0;34m"    # Blue
 BBlue="\033[1;34m"   # Bold Blue
 
 if [ -z $NETWORK ]; then
-  NETWORK="rinkeby"
+  NETWORK="localhost"
 fi
 
 if [ -z $ENV_VALUE ]; then
@@ -31,7 +31,7 @@ else
   echo "${Green} $ENV_VALUE"
 fi
 
-echo "${Default}   Ethereum network: ${Green}$NETWORK"
+echo "${Default}   RSK network: ${Green}$NETWORK"
 
 printf "${Default}   Localhost:"
 
