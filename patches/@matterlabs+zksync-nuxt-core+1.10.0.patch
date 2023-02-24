@@ -1,0 +1,49 @@
+diff --git a/node_modules/@matterlabs/zksync-nuxt-core/types/index.ts b/node_modules/@matterlabs/zksync-nuxt-core/types/index.ts
+index 11377f1..5cb12cd 100644
+--- a/node_modules/@matterlabs/zksync-nuxt-core/types/index.ts
++++ b/node_modules/@matterlabs/zksync-nuxt-core/types/index.ts
+@@ -3,13 +3,13 @@ import type { BigNumber, BigNumberish } from "ethers";
+ 
+ export type Link = `https://${string}/`;
+ 
+-export type EthereumNetwork = "goerli" | "mainnet";
++export type EthereumNetwork = "goerli" | "mainnet" | "localhost";
+ 
+ export type TransactionType = "Withdraw" | "Transfer" | "FastWithdraw" | "MintNFT" | "WithdrawNFT" | "FastWithdrawNFT" | ChangePubKeyFee | LegacyChangePubKeyFee | "Swap";
+ 
+ export type DecimalBalance = string;
+ 
+-export type ZkEthereumNetworkName = Network;
++export type ZkEthereumNetworkName = Network | "localhost";
+ 
+ export type Token = {
+   id: number;
+diff --git a/node_modules/@matterlabs/zksync-nuxt-core/utils/config.ts b/node_modules/@matterlabs/zksync-nuxt-core/utils/config.ts
+index 950ff1c..d7bd453 100644
+--- a/node_modules/@matterlabs/zksync-nuxt-core/utils/config.ts
++++ b/node_modules/@matterlabs/zksync-nuxt-core/utils/config.ts
+@@ -4,6 +4,11 @@ import { version as zkUIVersion } from "../package.json";
+ import { ModuleOptions, ZkEthereumNetworkConfig, ZkNetworkConfig, ZkConfig } from "../types";
+ 
+ export const zkSyncNetworkConfig: ZkNetworkConfig = {
++  localhost: {
++    ethereumNetwork: "localhost",
++    api: "https://127.0.0.1:3001/api/v0.2/",
++    explorer: "https://127.0.0.1:7001/",
++  },
+   goerli: {
+     ethereumNetwork: "goerli",
+     api: "https://goerli-api.zksync.io/api/v0.2/",
+@@ -53,6 +58,12 @@ export const ethereumNetworkConfig = (INFURA_KEY: string): ZkEthereumNetworkConf
+       explorer: "https://etherscan.io/",
+       rpc_url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+     },
++    localhost: {
++      id: 33,
++      name: "localhost",
++      explorer: "https://127.0.0.1:7001/",
++      rpc_url: `https://127.0.0.1:4444`,
++    }
+   };
+ };
+ 

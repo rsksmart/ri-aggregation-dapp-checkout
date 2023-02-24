@@ -38,7 +38,7 @@
     "url": "https://github.com/matter-labs/zksync-dapp-checkout.git"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16 <17.0.0"
   },
   "author": "Matter Labs",
   "browserslist": [
@@ -53,6 +53,7 @@
     "@nuxt/typescript-runtime": "^2.1.0",
     "core-js": "^3.15.1",
     "matter-zk-ui": "^1.0.9",
+    "node-gyp": "^9.3.1",
     "nuxt": "^2.15.7",
     "patch-package": "^6.4.7"
   },
@@ -74,7 +75,6 @@
     "@ramp-network/ramp-instant-sdk": "^2.5.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@types/fibers": "^3.1.1",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "^5.8.1",
     "cspell": "latest",
@@ -83,7 +83,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-prettier-vue": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
-    "fibers": "^5.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^10.5.4",
     "moment": "^2.29.1",
@@ -91,8 +90,8 @@
     "nuxt-webfontloader": "^1.1.0",
     "postcss": "latest",
     "prettier": "^2.5.1",
-    "sass": "^1.43.5",
-    "sass-loader": "^10.2.0",
+    "sass": "1.57.1",
+    "sass-loader": "^10",
     "semantic-release": "^18.0.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
@@ -147,7 +146,8 @@
     "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
     "lint": "yarn lint:script && yarn lint:style",
     "semantic-release": "semantic-release",
-    "postinstall": "husky install && patch-package"
+    "postinstall": "husky install",
+    "postinstall-postinstall": "patch-package"
   },
   "packageManager": "yarn@3.1.1"
 }

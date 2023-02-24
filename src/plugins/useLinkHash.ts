@@ -33,7 +33,7 @@ export default async ({ store, route, redirect }: Context, hash: string) => {
       await Promise.all([store.dispatch("checkout/requestInitialData"), store.dispatch("zk-account/updateAccountState", true)]);
     }
     if (!route.path.startsWith("/connect")) {
-      redirect({ path: "/connect", query: { link: hash } });
+      redirect("/connect", { link: hash });
     }
   } catch (error) {
     console.log("zkLink error", error);
