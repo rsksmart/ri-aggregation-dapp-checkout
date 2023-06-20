@@ -3032,7 +3032,7 @@ __metadata:
     "@nuxtjs/tailwindcss": ^4.2.1
     "@ramp-network/ramp-instant-sdk": ^2.5.0
     "@rsksmart/rif-rollup-js-sdk": ^0.13.1-alpha
-    "@rsksmart/rif-rollup-nuxt-core": ^1.0.0
+    "@rsksmart/rif-rollup-nuxt-core": ^1.0.2
     "@semantic-release/changelog": ^6.0.1
     "@semantic-release/git": ^10.0.1
     "@types/fibers": ^3.1.1
@@ -4058,9 +4058,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsksmart/rif-rollup-nuxt-core@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@rsksmart/rif-rollup-nuxt-core@npm:1.0.0"
+"@rsksmart/rif-rollup-nuxt-core@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@rsksmart/rif-rollup-nuxt-core@npm:1.0.2"
   dependencies:
     "@nuxtjs/axios": ^5.13.1
     "@rsksmart/rif-rollup-js-sdk": ^0.13.1-alpha
@@ -4087,7 +4087,7 @@ __metadata:
     nuxt: ^2.15.3
     ts-node: ^9.1.1
     web3: ^1.5.3
-  checksum: 5a6b790b78b4885a80752ce5d068ac83c4ec7076a6c28b147518864a6a6a949491e202fd3caa0a902db20d4067745b808c49ff04353834cd69b013a04ac63c95
+  checksum: 4ec3a4399188af1f63f98f77bd0651be2bc64b52a0f0c5777f5aeac6b37827546169d8cf7033c2760885249b3091c0784160474110f53d70204ded77b85995fa
   languageName: node
   linkType: hard
 
