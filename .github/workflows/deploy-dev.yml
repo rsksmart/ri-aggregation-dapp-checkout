@@ -29,8 +29,8 @@ jobs:
       run: |
         yarn install
 
-    - name: Yarn generate
-      run: yarn generate
+    # - name: Yarn generate
+    #   run: yarn generate
 
     - name: Build site
       run: |
