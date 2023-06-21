@@ -62,8 +62,8 @@ export const rampConfig: ZKIRampConfig = {
     url: undefined, // default
     hostApiKey: process.env.RAMP_MAINNET_HOST_API_KEY as string,
   },
-  goerli: {
-    url: "https://ri-widget-staging.firebaseapp.com/",
+  testnet: {
+    url: "https://checkout.dev.aggregation.rifcomputing.net/",
     hostApiKey: process.env.RAMP_GOERLI_HOST_API_KEY as string,
   },
 };
