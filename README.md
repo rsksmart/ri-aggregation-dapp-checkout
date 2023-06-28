@@ -8,7 +8,6 @@ zkSync Checkout helps anyone permission-less adopt checkout backed by zkSync, re
 
 ### Available Hosts
 
-* [```prod-mainnet```](https://checkout.aggregation.rifcomputing.net/)
 * [```prod-testnet```](https://checkout.dev.aggregation.rifcomputing.net/)
 
 ## Initial Setup / Static version generation
@@ -23,12 +22,6 @@ $ yarn dev
 # static version generation
 $ yarn ci:build:testnet
 # afterward you'll have prepared distributive in /public folder
-
-# generate static for the mainnet release
-$ sh cli-dev.sh ci
-$ yarn ci:build:mainnet
-# afterward you'll have prepared distributive in /public folder
-
 ```
 
 ## Dev toolset
@@ -105,6 +98,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 ### Libraries used  
 
 * [zkSync Checkout lib](https://www.npmjs.com/package/zksync-checkout): matter labs open sourced NPM-package
-* [RIF Rollup Checkout link builder](https://checkout.aggregation.rifcomputing.net/link): UI to create unique permissionless payment link and get paid in tokens
+* [RIF Rollup Checkout link builder](https://checkout.dev.aggregation.rifcomputing.net/link): UI to create unique permissionless payment link and get paid in tokens
 * [SDK description](https://docs.aggregation.rifcomputing.net/api/sdk/checkout/): details on how to use Checkout SDK
 * [ethers.js lib](https://docs.ethers.io/v5/): a simple to use Web3 Provider Bridge as a single JavaScript file
