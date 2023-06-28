@@ -1,21 +1,15 @@
-# [zkSync Checkout dApp](https://checkout.zksync.io) &middot; [zkSync.io](https://zksync.io/)  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE-MIT) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue)](./LICENSE-APACHE)
+# [RIF Rollup Checkout dApp](https://checkout.dev.aggregation.rifcomputing.net/) &middot;  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE-MIT) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue)](./LICENSE-APACHE)
 
-# zkSync Checkout — trustable permissionless DeFi payment gateway(test)
+# RIF Rollup Checkout — trustable permissionless DeFi payment gateway(test)
 
 zkSync Checkout helps anyone permission-less adopt checkout backed by zkSync, receive payments automatically and benefit from all the advantage of zkSync Rollup: speed of the transaction, times lower cost of a single transaction, simplicity of withdrawal fund to the onchain-wallet.
 
-* **[SDK documentation](https://zksync.io/api/sdk/checkout/)** | [**Changelog**](CHANGELOG.md)
-
-## Deployment
-
-zkSync uses firebase hosting for all it's dApps.
-Resource targets for the zkCheckout are:
+* **[SDK documentation](https://github.com/rsksmart/rif-rollup-js-sdk)** | [**Changelog**](CHANGELOG.md)
 
 ### Available Hosts
 
-* [```prod-mainnet```](https://checkout.zksync.io)
-* [```prod-goerli```](https://checkout-goerli.zksync.io)
-* [```staging```](https://staging-checkout-v1.zksync.dev/link)
+* [```prod-mainnet```](https://checkout.aggregation.rifcomputing.net/)
+* [```prod-testnet```](https://checkout.dev.aggregation.rifcomputing.net/)
 
 ## Initial Setup / Static version generation
 
@@ -23,11 +17,11 @@ Resource targets for the zkCheckout are:
 # install dependencies
 $ sh cli-dev.sh ci
 
-# Populate .env file as of goerli connection && serve with hot reload at localhost:3000
+# Populate .env file as of testnet connection && serve with hot reload at localhost:3000
 $ yarn dev
 
 # static version generation
-$ yarn ci:build:goerli
+$ yarn ci:build:testnet
 # afterward you'll have prepared distributive in /public folder
 
 # generate static for the mainnet release
@@ -110,8 +104,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ### Libraries used  
 
-* [zkSync Checkout lib](https://www.npmjs.com/package/zksync-checkout): our open sourced NPM-package
-* [zkSync.js lib](https://www.npmjs.com/package/zksync-checkout): our open sourced NPM-package
-* [zkCheckout link builder](https://checkout.zksync.io/link): UI to create unique permissionless payment link and get paid in tokens
-* [SDK description](https://zksync.io/api/sdk/checkout/): details on how to use zkCheckout SDK
+* [zkSync Checkout lib](https://www.npmjs.com/package/zksync-checkout): matter labs open sourced NPM-package
+* [RIF Rollup Checkout link builder](https://checkout.aggregation.rifcomputing.net/link): UI to create unique permissionless payment link and get paid in tokens
+* [SDK description](https://docs.aggregation.rifcomputing.net/api/sdk/checkout/): details on how to use Checkout SDK
 * [ethers.js lib](https://docs.ethers.io/v5/): a simple to use Web3 Provider Bridge as a single JavaScript file
