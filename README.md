@@ -2,13 +2,15 @@
 
 # RIF Rollup Checkout — trustable permissionless DeFi payment gateway(test)
 
-zkSync Checkout helps anyone permission-less adopt checkout backed by zkSync, receive payments automatically and benefit from all the advantage of zkSync Rollup: speed of the transaction, times lower cost of a single transaction, simplicity of withdrawal fund to the onchain-wallet.
+RIF Rollup Checkout helps anyone permission-less adopt checkout backed by RIF Rollup, receive payments automatically and benefit from all the advantage of RIF Rollup: speed of the transaction, times lower cost of a single transaction, simplicity of withdrawal fund to the onchain-wallet.
 
 * **[SDK documentation](https://github.com/rsksmart/rif-rollup-js-sdk)** | [**Changelog**](CHANGELOG.md)
 
 ### Available Hosts
 
 * [```prod-testnet```](https://checkout.dev.aggregation.rifcomputing.net/)
+
+[//]: # ([```prod-mainnet```]&#40;https://checkout.aggregation.rifcomputing.net/&#41;)
 
 ## Initial Setup / Static version generation
 
@@ -99,5 +101,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 * [zkSync Checkout lib](https://www.npmjs.com/package/zksync-checkout): matter labs open sourced NPM-package
 * [RIF Rollup Checkout link builder](https://checkout.dev.aggregation.rifcomputing.net/link): UI to create unique permissionless payment link and get paid in tokens
-* [SDK description](https://docs.aggregation.rifcomputing.net/api/sdk/checkout/): details on how to use Checkout SDK
 * [ethers.js lib](https://docs.ethers.io/v5/): a simple to use Web3 Provider Bridge as a single JavaScript file
+
+[//]: # (* [SDK description]&#40;https://docs.aggregation.rifcomputing.net/api/sdk/checkout/&#41;: details on how to use Checkout SDK)
