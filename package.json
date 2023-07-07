@@ -87,7 +87,7 @@
     "sass": "^1.43.5",
     "sass-loader": "^10.2.0",
     "semantic-release": "^18.0.1",
-    "stylelint": "^13.13.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended-scss": "^4.3.0",
     "stylelint-config-standard": "^20.0.0",
